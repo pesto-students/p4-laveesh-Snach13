@@ -1,10 +1,16 @@
 class Person {
-  constructor(name) {
+  constructor() {}
+  initialize(name) {
     this.name = name;
   }
 }
-const teacher = new Person("Nachiket");
-Person.prototype.teach = (subject) => {
-  return teacher.name + `is now teaching ${subject}`;
-};
-console.log(teacher.teach("Math"));
+
+class Teacher extends Person {
+  teach(subject) {
+    return `${this.name} is now teaching ${subject}`;
+  }
+}
+
+let him = new Teacher();
+him.initialize("Nachiket");
+console.log(him.teach("coding"));
