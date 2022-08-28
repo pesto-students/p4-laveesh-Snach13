@@ -1,5 +1,3 @@
-// Java program to print largest contiguous array sum
-
 class Main {
   public static void main(String[] args) {
 
